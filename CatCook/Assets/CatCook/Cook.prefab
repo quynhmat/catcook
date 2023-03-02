@@ -446,9 +446,9 @@ MonoBehaviour:
     dataVersion: 2
     usedInTemplate: {fileID: 0}
     name: FSM
-    startState: State 8
+    startState: OnLoad
     states:
-    - name: State 1
+    - name: Check First
       description: 
       colorIndex: 0
       position:
@@ -465,7 +465,7 @@ MonoBehaviour:
           name: FINISHED
           isSystemEvent: 1
           isGlobal: 0
-        toState: State 4
+        toState: Check Money
         linkStyle: 0
         linkConstraint: 0
         colorIndex: 0
@@ -473,7 +473,7 @@ MonoBehaviour:
           name: Go
           isSystemEvent: 0
           isGlobal: 0
-        toState: State 6
+        toState: Set Not First
         linkStyle: 0
         linkConstraint: 0
         colorIndex: 0
@@ -555,14 +555,14 @@ MonoBehaviour:
         - everyFrame
         paramDataPos: 00000000000000000000000000000000000000000100000000000000
         paramByteDataSize: 00000000000000000000000000000000000000000000000001000000
-    - name: State 2
+    - name: Button Click
       description: 
       colorIndex: 0
       position:
         serializedVersion: 2
         x: 55.09375
         y: 292.46094
-        width: 100
+        width: 101
         height: 32
       isBreakpoint: 0
       isSequence: 0
@@ -572,7 +572,7 @@ MonoBehaviour:
           name: Go
           isSystemEvent: 0
           isGlobal: 0
-        toState: State 1
+        toState: Check First
         linkStyle: 0
         linkConstraint: 0
         colorIndex: 0
@@ -661,7 +661,7 @@ MonoBehaviour:
         - sendEvent
         paramDataPos: 000000000000000000000000
         paramByteDataSize: 000000000000000000000000
-    - name: State 3
+    - name: Set Active
       description: 
       colorIndex: 0
       position:
@@ -785,14 +785,14 @@ MonoBehaviour:
         - tag
         paramDataPos: 000000000000000001000000000000000100000001000000020000000300000002000000030000000200000000000000
         paramByteDataSize: 000000000000000000000000010000000100000000000000000000000000000001000000010000000000000000000000
-    - name: State 4
+    - name: Check Money
       description: 
       colorIndex: 0
       position:
         serializedVersion: 2
         x: 327
         y: 299
-        width: 100
+        width: 109
         height: 48
       isBreakpoint: 0
       isSequence: 0
@@ -802,7 +802,7 @@ MonoBehaviour:
           name: FINISHED
           isSystemEvent: 1
           isGlobal: 0
-        toState: State 7
+        toState: Pay Money
         linkStyle: 0
         linkConstraint: 0
         colorIndex: 0
@@ -876,7 +876,7 @@ MonoBehaviour:
         - everyFrame
         paramDataPos: 000000000100000000000000010000000200000000000000
         paramByteDataSize: 000000000000000000000000000000000000000001000000
-    - name: State 5
+    - name: Play Sound
       description: 
       colorIndex: 0
       position:
@@ -893,7 +893,7 @@ MonoBehaviour:
           name: FINISHED
           isSystemEvent: 1
           isGlobal: 0
-        toState: State 2
+        toState: Button Click
         linkStyle: 0
         linkConstraint: 0
         colorIndex: 0
@@ -981,13 +981,13 @@ MonoBehaviour:
         - realTime
         paramDataPos: 00000000000000000000000000000000010000000000000000000000
         paramByteDataSize: 00000000000000000000000000000000000000000000000001000000
-    - name: State 7
+    - name: Pay Money
       description: 
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 504.1172
-        y: 334.23438
+        x: 558.5156
+        y: 316.48438
         width: 100
         height: 32
       isBreakpoint: 0
@@ -998,7 +998,7 @@ MonoBehaviour:
           name: FINISHED
           isSystemEvent: 1
           isGlobal: 0
-        toState: State 3
+        toState: Set Active
         linkStyle: 0
         linkConstraint: 0
         colorIndex: 0
@@ -1066,14 +1066,14 @@ MonoBehaviour:
         - everyFrame
         paramDataPos: 0000000001000000000000000200000004000000
         paramByteDataSize: 0000000000000000040000000000000001000000
-    - name: State 6
+    - name: Set Not First
       description: 
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 481.25
-        y: 245.67188
-        width: 100
+        x: 514.10156
+        y: 238.01562
+        width: 104
         height: 32
       isBreakpoint: 0
       isSequence: 0
@@ -1083,7 +1083,7 @@ MonoBehaviour:
           name: FINISHED
           isSystemEvent: 1
           isGlobal: 0
-        toState: State 3
+        toState: Set Active
         linkStyle: 0
         linkConstraint: 0
         colorIndex: 0
@@ -1143,13 +1143,13 @@ MonoBehaviour:
         - everyFrame
         paramDataPos: 000000000100000000000000
         paramByteDataSize: 000000000000000001000000
-    - name: State 8
+    - name: OnLoad
       description: 
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 137
-        y: 114
+        x: 67.203125
+        y: 112.61719
         width: 100
         height: 32
       isBreakpoint: 0
@@ -1160,7 +1160,7 @@ MonoBehaviour:
           name: FINISHED
           isSystemEvent: 1
           isGlobal: 0
-        toState: State 2
+        toState: Button Click
         linkStyle: 0
         linkConstraint: 0
         colorIndex: 0
@@ -1232,7 +1232,7 @@ MonoBehaviour:
           name: FINISHED
           isSystemEvent: 1
           isGlobal: 0
-        toState: State 5
+        toState: Play Sound
         linkStyle: 0
         linkConstraint: 0
         colorIndex: 0
@@ -1447,7 +1447,7 @@ MonoBehaviour:
     locked: 0
     manualUpdate: 0
     keepDelayedEventsOnStateExit: 0
-    preprocessed: 1
+    preprocessed: 0
     ExposedEvents: []
     RestartOnEnable: 1
     EnableDebugFlow: 0
