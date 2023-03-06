@@ -844,7 +844,7 @@ MonoBehaviour:
           name: FINISHED
           isSystemEvent: 1
           isGlobal: 0
-        toState: State 3
+        toState: Check Kitchen Null
         linkStyle: 0
         linkConstraint: 0
         colorIndex: 0
@@ -2021,14 +2021,14 @@ MonoBehaviour:
         - finishEvent
         paramDataPos: 00000000000000000000000000000000000000000000000000000000010000000200000001000000
         paramByteDataSize: 00000000000000000100000000000000000000000000000000000000000000000000000000000000
-    - name: State 3
+    - name: Check Kitchen Null
       description: 
       colorIndex: 0
       position:
         serializedVersion: 2
         x: 754
         y: 221
-        width: 100
+        width: 139
         height: 48
       isBreakpoint: 0
       isSequence: 0
@@ -2038,7 +2038,7 @@ MonoBehaviour:
           name: Check
           isSystemEvent: 0
           isGlobal: 0
-        toState: State 4
+        toState: Wait Kitchen
         linkStyle: 0
         linkConstraint: 0
         colorIndex: 0
@@ -2110,14 +2110,14 @@ MonoBehaviour:
         - everyFrame
         paramDataPos: 0000000000000000010000000000000000000000
         paramByteDataSize: 0000000000000000000000000000000001000000
-    - name: State 4
+    - name: Wait Kitchen
       description: 
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 915
-        y: 259
-        width: 100
+        x: 971.1406
+        y: 258.97656
+        width: 104
         height: 32
       isBreakpoint: 0
       isSequence: 0
