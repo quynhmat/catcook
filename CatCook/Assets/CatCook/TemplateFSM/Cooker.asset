@@ -24,8 +24,8 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 236.58594
-        y: 244.71875
+        x: 232.92969
+        y: 245.9375
         width: 100
         height: 32
       isBreakpoint: 0
@@ -36,7 +36,7 @@ MonoBehaviour:
           name: FINISHED
           isSystemEvent: 1
           isGlobal: 0
-        toState: State 7
+        toState: Speed
         linkStyle: 0
         linkConstraint: 0
         colorIndex: 0
@@ -298,7 +298,7 @@ MonoBehaviour:
         - sendEvent
         paramDataPos: 000000000000000000000000010000000200000000000000040000000000000001000000000000000100000002000000030000000100000002000000030000000100000002000000040000000200000005000000000000000100000003000000040000000600000004000000050000000700000000000000
         paramByteDataSize: 000000000000000000000000000000000000000004000000010000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-    - name: State 2
+    - name: Wait first
       description: 
       colorIndex: 0
       position:
@@ -506,7 +506,7 @@ MonoBehaviour:
           name: FINISHED
           isSystemEvent: 1
           isGlobal: 0
-        toState: State 6
+        toState: Random Pos
         linkStyle: 0
         linkConstraint: 0
         colorIndex: 0
@@ -858,7 +858,7 @@ MonoBehaviour:
         - 
         - 
         actionEnabled: 010101
-        actionIsOpen: 000001
+        actionIsOpen: 010101
         actionStartIndex: 00000000050000000a000000
         actionHashCodes: 5b66cf005b66cf00d899af02
         unityObjectParams: []
@@ -1031,7 +1031,7 @@ MonoBehaviour:
         - 
         - 
         actionEnabled: 010101
-        actionIsOpen: 010001
+        actionIsOpen: 000000
         actionStartIndex: 000000000200000006000000
         actionHashCodes: 9bd6f801184b5704fa0e5402
         unityObjectParams: []
@@ -1706,7 +1706,7 @@ MonoBehaviour:
           name: FINISHED
           isSystemEvent: 1
           isGlobal: 0
-        toState: State 2
+        toState: Wait first
         linkStyle: 0
         linkConstraint: 0
         colorIndex: 0
@@ -1918,7 +1918,7 @@ MonoBehaviour:
           name: FINISHED
           isSystemEvent: 1
           isGlobal: 0
-        toState: State 2
+        toState: Wait first
         linkStyle: 0
         linkConstraint: 0
         colorIndex: 0
@@ -2299,14 +2299,14 @@ MonoBehaviour:
         - resetLocalRotation
         paramDataPos: 00000000000000000000000001000000010000000000000001000000
         paramByteDataSize: 00000000000000000000000000000000000000000000000000000000
-    - name: State 6
+    - name: Random Pos
       description: 
       colorIndex: 0
       position:
         serializedVersion: 2
         x: 285.66406
         y: 499.95312
-        width: 100
+        width: 103
         height: 32
       isBreakpoint: 0
       isSequence: 0
@@ -2475,7 +2475,7 @@ MonoBehaviour:
         - everyFrame
         paramDataPos: 000000000100000002000000030000000400000005000000000000000100000006000000070000000800000000000000020000000300000001000000040000000900000005000000
         paramByteDataSize: 000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001000000000000000000000004000000000000000000000001000000
-    - name: State 7
+    - name: Speed
       description: 
       colorIndex: 0
       position:
@@ -2492,7 +2492,7 @@ MonoBehaviour:
           name: FINISHED
           isSystemEvent: 1
           isGlobal: 0
-        toState: State 2
+        toState: Wait first
         linkStyle: 0
         linkConstraint: 0
         colorIndex: 0

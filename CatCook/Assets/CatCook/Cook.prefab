@@ -1056,7 +1056,7 @@ MonoBehaviour:
           tooltip: 
           showInInspector: 0
           networkSync: 0
-          value: 0
+          value: 20
         - useVariable: 0
           name: 
           tooltip: 
@@ -1274,7 +1274,7 @@ MonoBehaviour:
           tooltip: 
           showInInspector: 0
           networkSync: 0
-          value: 0
+          value: 20
         - useVariable: 1
           name: ShopMoneyF
           tooltip: 
@@ -1634,7 +1634,7 @@ MonoBehaviour:
           tooltip: 
           showInInspector: 0
           networkSync: 0
-          value: 0
+          value: 20
         fsmIntParams:
         - useVariable: 1
           name: Price
@@ -1936,7 +1936,7 @@ MonoBehaviour:
         tooltip: 
         showInInspector: 1
         networkSync: 0
-        value: 1
+        value: 0
       - useVariable: 1
         name: UpMoneyF
         tooltip: 
@@ -1949,6 +1949,18 @@ MonoBehaviour:
         showInInspector: 0
         networkSync: 0
         value: 20
+      - useVariable: 1
+        name: Value
+        tooltip: 
+        showInInspector: 0
+        networkSync: 0
+        value: 2
+      - useVariable: 1
+        name: ValueRate
+        tooltip: 
+        showInInspector: 0
+        networkSync: 0
+        value: 1.3
       intVariables:
       - useVariable: 1
         name: Price
@@ -1974,6 +1986,12 @@ MonoBehaviour:
         showInInspector: 1
         networkSync: 0
         value: 10
+      - useVariable: 1
+        name: Type
+        tooltip: 
+        showInInspector: 1
+        networkSync: 0
+        value: 1
       boolVariables: []
       stringVariables: []
       vector2Variables: []
@@ -2013,7 +2031,7 @@ MonoBehaviour:
       enumVariables: []
       categories:
       - 
-      variableCategoryIDs: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+      variableCategoryIDs: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
     description: 
     docUrl: 
     showStateLabel: 0

@@ -324,7 +324,7 @@ MonoBehaviour:
         tooltip: 
         showInInspector: 1
         networkSync: 0
-        value: 10
+        value: 150
       boolVariables: []
       stringVariables: []
       vector2Variables: []
