@@ -51,6 +51,12 @@ MonoBehaviour:
       showInInspector: 0
       networkSync: 0
       value: 0
+    - useVariable: 1
+      name: Pool_ID
+      tooltip: 
+      showInInspector: 0
+      networkSync: 0
+      value: 0
     boolVariables:
     - useVariable: 1
       name: FirstCook
@@ -84,5 +90,5 @@ MonoBehaviour:
     enumVariables: []
     categories:
     - 
-    variableCategoryIDs: 000000000000000000000000000000000000000000000000000000000000000000000000
+    variableCategoryIDs: 00000000000000000000000000000000000000000000000000000000000000000000000000000000
   events: []
