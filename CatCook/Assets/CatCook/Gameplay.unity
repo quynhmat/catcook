@@ -14797,7 +14797,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 50
-        y: 100
+        y: 132
         width: 100
         height: 32
       isBreakpoint: 0
@@ -14976,7 +14976,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 84
-        y: 208
+        y: 240
         width: 100
         height: 48
       isBreakpoint: 0
@@ -15189,7 +15189,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 335.0547
-        y: 320.29688
+        y: 352.29688
         width: 100
         height: 32
       isBreakpoint: 0
@@ -15297,7 +15297,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 389.09375
-        y: 174.35156
+        y: 206.35156
         width: 100
         height: 48
       isBreakpoint: 0
@@ -15379,7 +15379,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 229.10156
-        y: 128.14062
+        y: 160.14062
         width: 100
         height: 32
       isBreakpoint: 0
@@ -15487,7 +15487,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 638.75
-        y: 259.02344
+        y: 291.02344
         width: 100
         height: 16
       isBreakpoint: 0
@@ -15548,7 +15548,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 494.15625
-        y: 331.32812
+        y: 363.32812
         width: 100
         height: 32
       isBreakpoint: 0
@@ -15670,6 +15670,66 @@ MonoBehaviour:
         - volume
         paramDataPos: 0000000001000000000000000100000000000000010000000200000000000000000000000000000002000000
         paramByteDataSize: 0000000000000000010000000100000000000000000000000100000000000000000000000000000000000000
+    - name: State 4
+      description: 
+      colorIndex: 0
+      position:
+        serializedVersion: 2
+        x: 508
+        y: 112
+        width: 100
+        height: 32
+      isBreakpoint: 0
+      isSequence: 0
+      hideUnused: 0
+      transitions:
+      - fsmEvent:
+          name: FINISHED
+          isSystemEvent: 1
+          isGlobal: 0
+        toState: Destroy
+        linkStyle: 0
+        linkConstraint: 0
+        colorIndex: 0
+      actionData:
+        actionNames: []
+        customNames: []
+        actionEnabled: 
+        actionIsOpen: 
+        actionStartIndex: 
+        actionHashCodes: 
+        unityObjectParams: []
+        fsmGameObjectParams: []
+        fsmOwnerDefaultParams: []
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams: []
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams: []
+        fsmObjectParams: []
+        fsmVarParams: []
+        fsmArrayParams: []
+        fsmEnumParams: []
+        fsmFloatParams: []
+        fsmIntParams: []
+        fsmBoolParams: []
+        fsmVector2Params: []
+        fsmVector3Params: []
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams: []
+        stringParams: []
+        byteData: 
+        arrayParamSizes: 
+        arrayParamTypes: []
+        customTypeSizes: 
+        customTypeNames: []
+        paramDataType: 
+        paramName: []
+        paramDataPos: 
+        paramByteDataSize: 
     events:
     - name: FINISHED
       isSystemEvent: 1
@@ -15680,10 +15740,21 @@ MonoBehaviour:
     - name: Go
       isSystemEvent: 0
       isGlobal: 0
+    - name: LoadMap
+      isSystemEvent: 0
+      isGlobal: 0
     - name: goEnd
       isSystemEvent: 0
       isGlobal: 0
-    globalTransitions: []
+    globalTransitions:
+    - fsmEvent:
+        name: LoadMap
+        isSystemEvent: 0
+        isGlobal: 0
+      toState: State 4
+      linkStyle: 0
+      linkConstraint: 0
+      colorIndex: 0
     variables:
       floatVariables:
       - useVariable: 1
@@ -40325,7 +40396,7 @@ MonoBehaviour:
         tooltip: 
         showInInspector: 1
         networkSync: 0
-        value: 5
+        value: 0
       - useVariable: 1
         name: NextValue
         tooltip: 
@@ -44394,7 +44465,7 @@ MonoBehaviour:
         type: 1
         objectTypeName: UnityEngine.Object
         floatValues: []
-        intValues: 05000000040000000900000000000000000000000000000000000000000000000000000000000000
+        intValues: 05000000050000000500000005000000050000000500000005000000050000000500000000000000
         boolValues: 
         stringValues: []
         vector4Values: []
@@ -44442,7 +44513,7 @@ MonoBehaviour:
         - 20
         - 30
         - 40
-        - 0
+        - 50
         - 0
         intValues: 
         boolValues: 
@@ -44452,7 +44523,7 @@ MonoBehaviour:
       - useVariable: 1
         name: DB_T_Level
         tooltip: 
-        showInInspector: 0
+        showInInspector: 1
         networkSync: 0
         type: 1
         objectTypeName: UnityEngine.Object
@@ -44486,10 +44557,154 @@ MonoBehaviour:
         stringValues: []
         vector4Values: []
         objectReferences: []
+      - useVariable: 1
+        name: DB_T_ValueRate
+        tooltip: 
+        showInInspector: 0
+        networkSync: 0
+        type: 0
+        objectTypeName: UnityEngine.Object
+        floatValues:
+        - 0
+        - 1.3
+        - 1.3
+        - 1.3
+        - 1.3
+        - 1.3
+        - 1.3
+        - 1.3
+        - 1.3
+        - 2.5
+        - 0
+        intValues: 
+        boolValues: 
+        stringValues: []
+        vector4Values: []
+        objectReferences: []
+      - useVariable: 1
+        name: DB_K_ValueRate
+        tooltip: 
+        showInInspector: 0
+        networkSync: 0
+        type: 0
+        objectTypeName: UnityEngine.Object
+        floatValues:
+        - 1.3
+        - 1.3
+        - 1.3
+        - 1.3
+        - 1.3
+        - 1.3
+        - 1.3
+        - 1.3
+        - 1.3
+        - 1
+        - 0
+        intValues: 
+        boolValues: 
+        stringValues: []
+        vector4Values: []
+        objectReferences: []
+      - useVariable: 1
+        name: DB_T_PriceRate
+        tooltip: 
+        showInInspector: 1
+        networkSync: 0
+        type: 0
+        objectTypeName: UnityEngine.Object
+        floatValues:
+        - 1.3
+        - 1.3
+        - 1.4
+        - 1.5
+        - 1.6
+        - 1.8
+        - 1.9
+        - 2
+        - 2.2
+        - 1.3
+        - 0
+        intValues: 
+        boolValues: 
+        stringValues: []
+        vector4Values: []
+        objectReferences: []
+      - useVariable: 1
+        name: DB_K_PriceRate
+        tooltip: 
+        showInInspector: 0
+        networkSync: 0
+        type: 0
+        objectTypeName: UnityEngine.Object
+        floatValues:
+        - 1.2
+        - 1.3
+        - 1.5
+        - 1.8
+        - 2
+        - 2.2
+        - 2.5
+        - 3
+        - 5
+        - 1.3
+        - 0
+        intValues: 
+        boolValues: 
+        stringValues: []
+        vector4Values: []
+        objectReferences: []
+      - useVariable: 1
+        name: DB_K_UpMoneyF
+        tooltip: 
+        showInInspector: 1
+        networkSync: 0
+        type: 0
+        objectTypeName: UnityEngine.Object
+        floatValues:
+        - 0
+        - 20
+        - 30
+        - 40
+        - 50
+        - 50
+        - 60
+        - 70
+        - 80
+        - 0
+        - 0
+        intValues: 
+        boolValues: 
+        stringValues: []
+        vector4Values: []
+        objectReferences: []
+      - useVariable: 1
+        name: DB_T_UpMoneyF
+        tooltip: 
+        showInInspector: 1
+        networkSync: 0
+        type: 0
+        objectTypeName: UnityEngine.Object
+        floatValues:
+        - 0
+        - 10
+        - 20
+        - 30
+        - 40
+        - 50
+        - 60
+        - 70
+        - 80
+        - 0
+        - 0
+        intValues: 
+        boolValues: 
+        stringValues: []
+        vector4Values: []
+        objectReferences: []
       enumVariables: []
       categories:
       - 
-      variableCategoryIDs: 00000000000000000000000000000000000000000000000000000000
+      variableCategoryIDs: 00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
     description: 
     docUrl: 
     showStateLabel: 0
@@ -53975,7 +54190,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 505.46875
+        x: 361.46875
         y: 518.5703
         width: 127
         height: 48
@@ -54057,8 +54272,8 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 63.3125
-        y: 413.54688
+        x: 62.164062
+        y: 330.02344
         width: 101
         height: 32
       isBreakpoint: 0
@@ -54163,7 +54378,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 968.21094
+        x: 824.21094
         y: 509.71094
         width: 100
         height: 48
@@ -54366,7 +54581,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 767.7656
+        x: 623.7656
         y: 576.6719
         width: 109
         height: 48
@@ -54464,7 +54679,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 490.3125
+        x: 346.3125
         y: 625.2344
         width: 100
         height: 32
@@ -54569,7 +54784,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 709.97656
+        x: 565.97656
         y: 495.3828
         width: 113
         height: 32
@@ -54662,7 +54877,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 1162.0156
+        x: 1018.0156
         y: 560.0156
         width: 100
         height: 32
@@ -54747,7 +54962,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 577.0078
+        x: 433.0078
         y: 103.72656
         width: 108
         height: 32
@@ -54848,7 +55063,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 633.6172
+        x: 489.6172
         y: 673.53125
         width: 100
         height: 32
@@ -55083,7 +55298,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 1148.8125
+        x: 1004.8125
         y: 725.6875
         width: 100
         height: 48
@@ -55215,7 +55430,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 1333.1406
+        x: 1189.1406
         y: 724.28906
         width: 100
         height: 32
@@ -55335,7 +55550,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 1149.6094
+        x: 1005.6094
         y: 898.3125
         width: 100
         height: 48
@@ -55433,7 +55648,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 974.7422
+        x: 830.7422
         y: 818.75
         width: 100
         height: 32
@@ -55520,7 +55735,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 1367.9375
+        x: 1223.9375
         y: 820.96094
         width: 100
         height: 32
@@ -55607,7 +55822,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 1151.5234
+        x: 1007.52344
         y: 790.2031
         width: 100
         height: 48
@@ -55698,7 +55913,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 573.34375
+        x: 429.34375
         y: 294.01562
         width: 100
         height: 48
@@ -55846,7 +56061,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 407.91406
+        x: 263.91406
         y: 149.96875
         width: 100
         height: 32
@@ -55858,7 +56073,7 @@ MonoBehaviour:
           name: FINISHED
           isSystemEvent: 1
           isGlobal: 0
-        toState: State 6
+        toState: Check Kitchenn
         linkStyle: 0
         linkConstraint: 0
         colorIndex: 0
@@ -56111,7 +56326,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 1171.8125
+        x: 1027.8125
         y: 425.7578
         width: 100
         height: 32
@@ -56225,7 +56440,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 1155
+        x: 1011
         y: 669
         width: 100
         height: 32
@@ -56339,7 +56554,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 948.4922
+        x: 804.4922
         y: 664.375
         width: 101
         height: 32
@@ -56444,7 +56659,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 967.3906
+        x: 823.3906
         y: 608.35156
         width: 112
         height: 32
@@ -56549,7 +56764,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 434.53125
+        x: 290.53125
         y: 423.29688
         width: 114
         height: 48
@@ -56631,7 +56846,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 679.53125
+        x: 535.53125
         y: 410.4453
         width: 137
         height: 48
@@ -56713,7 +56928,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 889.625
+        x: 745.625
         y: 435.5078
         width: 116
         height: 32
@@ -56806,7 +57021,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 1321.9922
+        x: 1177.9922
         y: 243.15625
         width: 100
         height: 16
@@ -56897,7 +57112,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 385.10156
+        x: 241.10156
         y: 227.4375
         width: 100
         height: 32
@@ -56917,6 +57132,9 @@ MonoBehaviour:
         actionNames:
         - HutongGames.PlayMaker.Actions.GetFsmArrayItem
         - HutongGames.PlayMaker.Actions.GetFsmArrayItem
+        - HutongGames.PlayMaker.Actions.GetFsmArrayItem
+        - HutongGames.PlayMaker.Actions.GetFsmArrayItem
+        - HutongGames.PlayMaker.Actions.GetFsmArrayItem
         - HutongGames.PlayMaker.Actions.GetChildNum
         - HutongGames.PlayMaker.Actions.ActivateGameObject
         customNames:
@@ -56924,10 +57142,13 @@ MonoBehaviour:
         - 
         - 
         - 
-        actionEnabled: 01010101
-        actionIsOpen: 00000101
-        actionStartIndex: 00000000090000001200000015000000
-        actionHashCodes: 35338f0535338f05280cdd05b2cf1000
+        - 
+        - 
+        - 
+        actionEnabled: 01010101010101
+        actionIsOpen: 00000000010000
+        actionStartIndex: 0000000009000000120000001b000000240000002d00000030000000
+        actionHashCodes: 35338f0535338f0535338f0535338f0535338f05280cdd05b2cf1000
         unityObjectParams: []
         fsmGameObjectParams:
         - useVariable: 1
@@ -56937,6 +57158,30 @@ MonoBehaviour:
           networkSync: 0
           value: {fileID: 0}
         fsmOwnerDefaultParams:
+        - ownerOption: 1
+          gameObject:
+            useVariable: 1
+            name: DataBase
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: {fileID: 0}
+        - ownerOption: 1
+          gameObject:
+            useVariable: 1
+            name: DataBase
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: {fileID: 0}
+        - ownerOption: 1
+          gameObject:
+            useVariable: 1
+            name: DataBase
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: {fileID: 0}
         - ownerOption: 1
           gameObject:
             useVariable: 1
@@ -57000,6 +57245,42 @@ MonoBehaviour:
           showInInspector: 0
           networkSync: 0
           value: DB_K_Value
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: FSM
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: DB_K_ValueRate
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: FSM
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: DB_K_PriceRate
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: FSM
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: DB_K_UpMoneyF
         fsmObjectParams: []
         fsmVarParams:
         - variableName: LevelMax
@@ -57050,10 +57331,100 @@ MonoBehaviour:
             stringValues: []
             vector4Values: []
             objectReferences: []
+        - variableName: ValueRate
+          objectType: UnityEngine.Object
+          useVariable: 1
+          type: 0
+          floatValue: 1.3
+          intValue: 0
+          boolValue: 0
+          stringValue: 
+          vector4Value: {x: 0, y: 0, z: 0, w: 0}
+          objectReference: {fileID: 0}
+          arrayValue:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            type: -1
+            objectTypeName: 
+            floatValues: []
+            intValues: 
+            boolValues: 
+            stringValues: []
+            vector4Values: []
+            objectReferences: []
+        - variableName: PriceRate
+          objectType: UnityEngine.Object
+          useVariable: 1
+          type: 0
+          floatValue: 1.3
+          intValue: 0
+          boolValue: 0
+          stringValue: 
+          vector4Value: {x: 0, y: 0, z: 0, w: 0}
+          objectReference: {fileID: 0}
+          arrayValue:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            type: -1
+            objectTypeName: 
+            floatValues: []
+            intValues: 
+            boolValues: 
+            stringValues: []
+            vector4Values: []
+            objectReferences: []
+        - variableName: UpMoneyF
+          objectType: UnityEngine.Object
+          useVariable: 1
+          type: 0
+          floatValue: 10
+          intValue: 0
+          boolValue: 0
+          stringValue: 
+          vector4Value: {x: 0, y: 0, z: 0, w: 0}
+          objectReference: {fileID: 0}
+          arrayValue:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            type: -1
+            objectTypeName: 
+            floatValues: []
+            intValues: 
+            boolValues: 
+            stringValues: []
+            vector4Values: []
+            objectReferences: []
         fsmArrayParams: []
         fsmEnumParams: []
         fsmFloatParams: []
         fsmIntParams:
+        - useVariable: 1
+          name: ID
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 1
+          name: ID
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 1
+          name: ID
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
         - useVariable: 1
           name: ID
           tooltip: 
@@ -57097,13 +57468,49 @@ MonoBehaviour:
         - 
         - 
         - 
-        byteData: 00000000
+        - 
+        - 
+        - 
+        - 
+        - 
+        - 
+        - 
+        - 
+        - 
+        byteData: 00000000000000
         arrayParamSizes: 
         arrayParamTypes: []
         customTypeSizes: 
         customTypeNames: []
-        paramDataType: 1400000012000000120000001000000027000000010000001700000017000000170000001400000012000000120000001000000027000000010000001700000017000000170000001400000010000000130000001400000011000000110000000100000001000000
+        paramDataType: 1400000012000000120000001000000027000000010000001700000017000000170000001400000012000000120000001000000027000000010000001700000017000000170000001400000012000000120000001000000027000000010000001700000017000000170000001400000012000000120000001000000027000000010000001700000017000000170000001400000012000000120000001000000027000000010000001700000017000000170000001400000010000000130000001400000011000000110000000100000001000000
         paramName:
+        - gameObject
+        - fsmName
+        - variableName
+        - index
+        - storeValue
+        - everyFrame
+        - indexOutOfRange
+        - fsmNotFound
+        - variableNotFound
+        - gameObject
+        - fsmName
+        - variableName
+        - index
+        - storeValue
+        - everyFrame
+        - indexOutOfRange
+        - fsmNotFound
+        - variableNotFound
+        - gameObject
+        - fsmName
+        - variableName
+        - index
+        - storeValue
+        - everyFrame
+        - indexOutOfRange
+        - fsmNotFound
+        - variableNotFound
         - gameObject
         - fsmName
         - variableName
@@ -57130,16 +57537,16 @@ MonoBehaviour:
         - recursive
         - resetOnExit
         - everyFrame
-        paramDataPos: 0000000000000000010000000000000000000000000000000000000001000000020000000100000002000000030000000100000001000000010000000300000004000000050000000200000002000000000000000300000000000000010000000200000003000000
-        paramByteDataSize: 0000000000000000000000000000000000000000010000000000000000000000000000000000000000000000000000000000000000000000010000000000000000000000000000000000000000000000000000000000000000000000000000000100000001000000
-    - name: State 6
+        paramDataPos: 000000000000000001000000000000000000000000000000000000000100000002000000010000000200000003000000010000000100000001000000030000000400000005000000020000000400000005000000020000000200000002000000060000000700000008000000030000000600000007000000030000000300000003000000090000000a0000000b0000000400000008000000090000000400000004000000040000000c0000000d0000000e0000000500000005000000000000000600000000000000010000000500000006000000
+        paramByteDataSize: 0000000000000000000000000000000000000000010000000000000000000000000000000000000000000000000000000000000000000000010000000000000000000000000000000000000000000000000000000000000000000000010000000000000000000000000000000000000000000000000000000000000000000000010000000000000000000000000000000000000000000000000000000000000000000000010000000000000000000000000000000000000000000000000000000000000000000000000000000100000001000000
+    - name: Check Kitchenn
       description: 
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 561
+        x: 417
         y: 167
-        width: 100
+        width: 121
         height: 48
       isBreakpoint: 0
       isSequence: 0
@@ -57219,7 +57626,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 713.1953
+        x: 569.1953
         y: 231.39844
         width: 100
         height: 32
@@ -57239,16 +57646,46 @@ MonoBehaviour:
         actionNames:
         - HutongGames.PlayMaker.Actions.GetFsmArrayItem
         - HutongGames.PlayMaker.Actions.GetFsmArrayItem
+        - HutongGames.PlayMaker.Actions.GetFsmArrayItem
+        - HutongGames.PlayMaker.Actions.GetFsmArrayItem
+        - HutongGames.PlayMaker.Actions.GetFsmArrayItem
         customNames:
         - 
         - 
-        actionEnabled: 0101
-        actionIsOpen: 0101
-        actionStartIndex: 0000000009000000
-        actionHashCodes: 35338f0535338f05
+        - 
+        - 
+        - 
+        actionEnabled: 0101010101
+        actionIsOpen: 0000000101
+        actionStartIndex: 0000000009000000120000001b00000024000000
+        actionHashCodes: 35338f0535338f0535338f0535338f0535338f05
         unityObjectParams: []
         fsmGameObjectParams: []
         fsmOwnerDefaultParams:
+        - ownerOption: 1
+          gameObject:
+            useVariable: 1
+            name: DataBase
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: {fileID: 0}
+        - ownerOption: 1
+          gameObject:
+            useVariable: 1
+            name: DataBase
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: {fileID: 0}
+        - ownerOption: 1
+          gameObject:
+            useVariable: 1
+            name: DataBase
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: {fileID: 0}
         - ownerOption: 1
           gameObject:
             useVariable: 1
@@ -57296,6 +57733,42 @@ MonoBehaviour:
           showInInspector: 0
           networkSync: 0
           value: DB_T_Value
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: FSM
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: DB_T_ValueRate
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: FSM
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: DB_T_PriceRate
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: FSM
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: DB_T_UpMoneyF
         fsmObjectParams: []
         fsmVarParams:
         - variableName: LevelMax
@@ -57346,10 +57819,100 @@ MonoBehaviour:
             stringValues: []
             vector4Values: []
             objectReferences: []
+        - variableName: ValueRate
+          objectType: UnityEngine.Object
+          useVariable: 1
+          type: 0
+          floatValue: 1.3
+          intValue: 0
+          boolValue: 0
+          stringValue: 
+          vector4Value: {x: 0, y: 0, z: 0, w: 0}
+          objectReference: {fileID: 0}
+          arrayValue:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            type: -1
+            objectTypeName: 
+            floatValues: []
+            intValues: 
+            boolValues: 
+            stringValues: []
+            vector4Values: []
+            objectReferences: []
+        - variableName: PriceRate
+          objectType: UnityEngine.Object
+          useVariable: 1
+          type: 0
+          floatValue: 1.3
+          intValue: 0
+          boolValue: 0
+          stringValue: 
+          vector4Value: {x: 0, y: 0, z: 0, w: 0}
+          objectReference: {fileID: 0}
+          arrayValue:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            type: -1
+            objectTypeName: 
+            floatValues: []
+            intValues: 
+            boolValues: 
+            stringValues: []
+            vector4Values: []
+            objectReferences: []
+        - variableName: UpMoneyF
+          objectType: UnityEngine.Object
+          useVariable: 1
+          type: 0
+          floatValue: 10
+          intValue: 0
+          boolValue: 0
+          stringValue: 
+          vector4Value: {x: 0, y: 0, z: 0, w: 0}
+          objectReference: {fileID: 0}
+          arrayValue:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            type: -1
+            objectTypeName: 
+            floatValues: []
+            intValues: 
+            boolValues: 
+            stringValues: []
+            vector4Values: []
+            objectReferences: []
         fsmArrayParams: []
         fsmEnumParams: []
         fsmFloatParams: []
         fsmIntParams:
+        - useVariable: 1
+          name: ID
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 1
+          name: ID
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 1
+          name: ID
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
         - useVariable: 1
           name: ID
           tooltip: 
@@ -57375,12 +57938,21 @@ MonoBehaviour:
         - 
         - 
         - 
-        byteData: 0000
+        - 
+        - 
+        - 
+        - 
+        - 
+        - 
+        - 
+        - 
+        - 
+        byteData: 0000000000
         arrayParamSizes: 
         arrayParamTypes: []
         customTypeSizes: 
         customTypeNames: []
-        paramDataType: 140000001200000012000000100000002700000001000000170000001700000017000000140000001200000012000000100000002700000001000000170000001700000017000000
+        paramDataType: 140000001200000012000000100000002700000001000000170000001700000017000000140000001200000012000000100000002700000001000000170000001700000017000000140000001200000012000000100000002700000001000000170000001700000017000000140000001200000012000000100000002700000001000000170000001700000017000000140000001200000012000000100000002700000001000000170000001700000017000000
         paramName:
         - gameObject
         - fsmName
@@ -57400,8 +57972,35 @@ MonoBehaviour:
         - indexOutOfRange
         - fsmNotFound
         - variableNotFound
-        paramDataPos: 000000000000000001000000000000000000000000000000000000000100000002000000010000000200000003000000010000000100000001000000030000000400000005000000
-        paramByteDataSize: 000000000000000000000000000000000000000001000000000000000000000000000000000000000000000000000000000000000000000001000000000000000000000000000000
+        - gameObject
+        - fsmName
+        - variableName
+        - index
+        - storeValue
+        - everyFrame
+        - indexOutOfRange
+        - fsmNotFound
+        - variableNotFound
+        - gameObject
+        - fsmName
+        - variableName
+        - index
+        - storeValue
+        - everyFrame
+        - indexOutOfRange
+        - fsmNotFound
+        - variableNotFound
+        - gameObject
+        - fsmName
+        - variableName
+        - index
+        - storeValue
+        - everyFrame
+        - indexOutOfRange
+        - fsmNotFound
+        - variableNotFound
+        paramDataPos: 000000000000000001000000000000000000000000000000000000000100000002000000010000000200000003000000010000000100000001000000030000000400000005000000020000000400000005000000020000000200000002000000060000000700000008000000030000000600000007000000030000000300000003000000090000000a0000000b0000000400000008000000090000000400000004000000040000000c0000000d0000000e000000
+        paramByteDataSize: 000000000000000000000000000000000000000001000000000000000000000000000000000000000000000000000000000000000000000001000000000000000000000000000000000000000000000000000000000000000000000001000000000000000000000000000000000000000000000000000000000000000000000001000000000000000000000000000000000000000000000000000000000000000000000001000000000000000000000000000000
     events:
     - name: FINISHED
       isSystemEvent: 1
