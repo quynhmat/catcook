@@ -13917,7 +13917,7 @@ MonoBehaviour:
         tooltip: 
         showInInspector: 1
         networkSync: 0
-        value: 1
+        value: 10
       - useVariable: 1
         name: ShitTemp
         tooltip: 
